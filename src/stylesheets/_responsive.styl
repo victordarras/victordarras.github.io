@@ -1,0 +1,40 @@
+@media screen and (max-width:720px)
+  body
+    margin 2vw
+  .Content
+    display: block
+    &__section
+      padding-bottom: 3em
+      margin-bottom 1px
+
+
+@media print
+  @page
+    margin: 0
+
+  :root
+    --font-family sans-serif
+
+  body, html
+    background-color #fff
+    font-size 9pt
+    line-height 1.2
+
+  .hide-on-print
+    display none
+
+  .Content
+    display block
+    a
+      text-decoration underline
+      background-color var(--color-primary-light)
+    &__section
+      padding 1em 2em
+    &__accueil
+      min-height 0
+      grid-column span 3
+    &__bio
+      grid-column span 2
+    &__bonus
+      order 1
+      grid-column 3 / 3

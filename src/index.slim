@@ -1,0 +1,19 @@
+doctype 5
+html lang="fr-FR"
+
+  == Slim::Template.new('src/_head.slim').render
+
+  body.no-js
+    .Container
+      main.Content
+        == Slim::Template.new('src/_content-accueil.slim').render
+        == Slim::Template.new('src/_content-pro.slim').render
+        == Slim::Template.new('src/_content-bio.slim').render
+        == Slim::Template.new('src/_content-bonus.slim').render
+        .Content__section.Content__footer.hide-on-print
+          p title="↑↑↓↓←→←→BA" Je suis dispo pour discuter de toute opportunité !<br/>
+          a href="#" class="mailto btn" Contactez-moi
+
+    script src="script.js?__inline=true"
+
+
